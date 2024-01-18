@@ -51,10 +51,17 @@ app.post('/api/v1/start-meeting-request', function (req, res) {
 app.post('/api/v1/join-meeting', function (req, res) {    
   io.emit('join-meeting-chanel', req.body);
   res.end();
-  
+
   console.log('Received join Meeting');
 });
 
+// Join a meeting
+app.post('/api/v1/publish-meeting-decision', function (req, res) {    
+  io.emit('publish-meeting-decision-chanel', req.body);
+  res.end();
+  
+  console.log('Received Publish Meeting decision');
+});
 
 const PORT = process.env.PORT || 3006;
 
