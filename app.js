@@ -66,5 +66,5 @@ app.post('/api/v1/publish-meeting-decision', function (req, res) {
 const PORT = process.env.PORT || 3006;
 
 server.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on :${PORT}`);
 });
